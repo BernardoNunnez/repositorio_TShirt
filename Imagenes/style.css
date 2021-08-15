@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2? family = Alex + Brush & display = swap');
+/*familia de fuentes: 'Alex Brush', cursiva;*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alex Brush', cursive;
+    color: #949be1;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "seccionPadre "
+        "footer";
+    grid-template-rows: 100px 1fr 75px;
+    grid-template-columns:100%;
+}
+header#header{
+    grid-area: header;
+
+}
+main#seccionPadre{
+    grid-area: seccionPadre;
+}
+footer#footer{
+    grid-area: footer;
+}

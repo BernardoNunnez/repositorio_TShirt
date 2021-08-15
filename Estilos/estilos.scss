@@ -1,0 +1,282 @@
+/*Fuente de pagina*/
+
+/*forma de ingreso fuente
+font-family: 'Lobster', cursive;
+font-family: 'Abril Fatface', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+*/ 
+@import url('https://fonts.googleapis.com/css2? family = Langosta & display = swap');
+@import url('https://fonts.googleapis.com/css2? family = Source + Sans + Pro: wght @ 200 & display = swap');
+
+/*colores*/
+@import "./_colores/colores";
+@import "./_colores/tamaños";
+
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $color-1;
+}
+
+.header{
+    position: fixed;
+    width: $medida-porciento;
+    background-image: linear-gradient( $color-2,rgba(255, 117, 179, 0.021) );
+    /*box-shadow: -4px -5px 40px #818181;*/
+    .menu__texto{
+        color: $color-0 !important;
+    }
+    .menu__texto:hover{
+        color: rgb(87, 78, 64) !important;
+    }
+}
+
+.hero{
+    background-image: url(../Imagenes/imagen-portada2.png);
+    height: $medida-vh - 65;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    
+    /*diseño boton*/
+    .pinkBg {
+        text-decoration: none;
+        font-size: $medida-px/5;
+        color: $color-2;
+        background: radial-gradient($color-2,black);
+    }
+    .pinkBg:hover{
+        color: rgb(163, 163, 163);
+    }
+    .intro-banner-vdo-play-btn{
+        height:0vw;
+        width:0vw;
+        position:absolute;
+        top:$medida-porciento/3.125;
+        left:$medida-porciento/2;
+        text-align:center;
+        margin:-30px 0 0 -30px;
+        border-radius:30px;
+        z-index:1
+    }
+
+    .intro-banner-vdo-play-btn .ripple{
+        position:absolute;
+        width:$medida-px * 2.2;
+        height:$medida-px * 1.3;
+        z-index:-1;
+        opacity:0;
+        margin:-80px 0 0 -80px;
+        border-radius:$medida-px - 40;
+        -webkit-animation:ripple 1.8s infinite;
+        animation:ripple 1.8s infinite
+    }
+
+
+    @keyframes ripple{
+        0%{
+            opacity:1;
+            -webkit-transform:scale(0);
+            transform:scale(0)
+        }
+        100%{
+            opacity:0;
+            -webkit-transform:scale(1);
+            transform:scale(1, 0.5)
+        }
+    }
+    .intro-banner-vdo-play-btn .ripple:nth-child(2){
+        animation-delay:.3s;
+        -webkit-animation-delay:.3s
+    }
+    .intro-banner-vdo-play-btn .ripple:nth-child(3){
+        animation-delay:.6s;
+        -webkit-animation-delay:.6s
+    }   
+}
+.im__quienesSomos{
+    max-width: $medida-porciento/2.5;
+}
+
+.line__separadora{
+    background-color: $color-4;
+    height: 2px !important;
+
+}
+.destacado__padre{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+.destacado__hijo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.titulo__destacado--hijo{
+    color: $color-6;
+}
+.destacado__hijo img {
+    max-width: $medida-px*2.9;
+    border: solid 1px $color-1 ;
+}
+.destacado__hijo a {
+    width: $medida-vh - 60;
+    text-align: center;
+    text-decoration: none;
+    color: $color-6;
+    border: solid 1px;
+    border-radius: 20px;
+    border-color: $color-5;
+}
+.destacado__hijo a:hover{
+    color: $color-0;
+    background-color:$color-2;
+}
+.box__titulos{
+    color: $color-4;
+}
+.box__titulos::before, .box__titulos::after{
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid $color-2;
+    display: inline-block;
+    vertical-align: middle;
+
+} 
+.seccion__dos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box__mail{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 30px 30px 30px 30px;
+    align-items: center;
+    grid-column-gap: 20px;
+}
+.box__input{
+    width: 30vw ; height: 3vw;
+    transition: all 0s;
+    border: inherit;
+    border-radius: 20px;
+    font-size: 2vw;
+    background-color:rgba(196, 180, 155, 0.4);
+    box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.2);  
+}
+.box__input[placeholder]{
+    font-size: 1.5vw;
+    text-align: center;
+}
+.box__input:focus{
+    width: 200px;
+    font-size: 20px;
+    border: inherit;
+}
+.box__btn--enviar{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border: inherit;
+    background-color: $color-2;
+    border-radius: 20px;
+    width: 70px;
+    margin: 20px 20px 20px 20px;
+}
+.box__btn--enviar[value]{
+    color: $color-0;
+    text-align: center;
+}
+.box__btn--enviar:hover{
+    background-color: $color-5;
+}
+.box__btn--enviar[value]:hover{
+    color: $color-1;
+}
+.box__titulos--nosotros{
+    color: $color-6;
+    font-size: 2vw;
+    justify-self: center;
+    margin: 0px 20px 0px 20px;
+    text-align: center;
+}
+
+.box__texto{
+    width: 100%;
+    height: 10vw;
+    border: inherit;
+    border-radius: 20px;
+    background-color:rgba(196, 180, 155, 0.4);
+}
+.box__main--lostpag{
+    height: $medida-porciento/3;
+    text-align: center;
+    height: $medida-vh / 3;
+}
+.list__preguntasFrecuentes, a{
+    list-style: none;
+    text-decoration: none;
+    color: $color-3;
+    font-size: 2vw;
+}
+.list__preguntasFrecuentes a:hover{
+    color: $color-2;
+}
+.redes__iconos{
+    max-width: 25px;
+}
+.redes__texto{
+    text-decoration: none;
+}
+.redes__iconos:hover{
+    transform: scale(1.3);
+}
+.footer__list{
+    list-style: none;
+    color: #1f1e36;
+}
+.footer__list--titulo{
+    color: $color-2 ;
+    font-size: 2vw;
+}
+.footer__list a{
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: $color-1;
+}
+.footer__list a:hover{
+    color: $color-3;
+}
+
+.footer{
+    background-color: $color-0;
+}
+
+
+@media screen and (max-width:985px){
+    .destacado__padre{
+        grid-template-columns: 1fr;
+    }
+    .destacado__hijo a {
+        
+        font-size: $medida-vw / 15;
+    }
+    .menu__texto{
+        font-size: $medida-px - 70;
+    }
+    .footer__list--titulo{
+        font-size: $medida-px - 75;
+    }
+    .footer__list a{
+        font-size: $medida-px - 90;
+    }
+}
