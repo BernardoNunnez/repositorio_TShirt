@@ -36,6 +36,10 @@ font-family: 'Source Sans Pro', sans-serif;
   color: #574e40 !important;
 }
 
+.text__banner {
+  color: #3E4E50;
+}
+
 .hero {
   background-image: url(../Imagenes/imagen-portada2.png);
   height: 35vh;
