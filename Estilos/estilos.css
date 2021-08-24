@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*Fuente de pagina*/
 /*forma de ingreso fuente
 font-family: 'Lobster', cursive;
@@ -52,42 +51,10 @@ font-family: 'Source Sans Pro', sans-serif;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  /*diseño boton*/
 }
 
-.hero .pinkBg {
-  text-decoration: none;
-  font-size: 20px;
-  color: #FACFAD;
-  background: radial-gradient(#FACFAD, black);
-}
-
-.hero .pinkBg:hover {
-  color: #a3a3a3;
-}
-
-.hero .intro-banner-vdo-play-btn {
-  height: 0vw;
-  width: 0vw;
-  position: absolute;
-  top: 32%;
-  left: 50%;
-  text-align: center;
-  margin: -30px 0 0 -30px;
-  border-radius: 30px;
-  z-index: 1;
-}
-
-.hero .intro-banner-vdo-play-btn .ripple {
-  position: absolute;
-  width: 220px;
-  height: 130px;
-  z-index: -1;
-  opacity: 0;
-  margin: -80px 0 0 -80px;
-  border-radius: 60px;
-  -webkit-animation: ripple 1.8s infinite;
-  animation: ripple 1.8s infinite;
+.hero .carousel-control-next-icon {
+  background-image: url(../Imagenes/flecha.svg) !important;
 }
 
 @-webkit-keyframes ripple {
@@ -346,6 +313,9 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 
 @media screen and (max-width: 985px) {
+  .box__carousel {
+    display: none;
+  }
   .destacado__padre {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
